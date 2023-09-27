@@ -8,6 +8,6 @@ public class ScoreOnDeath : MonoBehaviour
 
     private void OnDestroy()
     {
-        ScoreManager.instance.amount += amount;
+       // ScoreManager.instance.amount += amount;
     }
 }
