@@ -11,21 +11,17 @@ public class  EnemyContactDestroyer : MonoBehaviour
         {
             //Debug.Log("hit");
             Destroy(gameObject);
-            if (Life.instance.barrier <= 0)
-            {
-                Life.instance.amount--;
-            }
+            other.GetComponent<Life>().amount--;
         }
         else if (other.gameObject.tag == "enemy")
         {
 
         }
-        else if(other.gameObject.tag=="Barrier")
-        {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-            Life.instance.barrier--;
-        }
+        //else if (other.gameObject.tag == "Barrier")
+        //{
+        //    Destroy(gameObject);
+        //    other.GetComponent<Life>().amount--;
+        //}
         else
         {
             Destroy(gameObject);

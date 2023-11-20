@@ -26,15 +26,5 @@ public class ScoreManager : MonoBehaviour
         {
             SceneManager.LoadScene("Win Scene");
         }
-
-        if (EnemiesManager.instance.enemies.Count > 10)
-        {
-            SceneManager.LoadScene("Lose Scene");
-        }
-
-        if (Life.instance.amount <= 0)
-        {
-            SceneManager.LoadScene("Lose Scene");
-        }
     }
 }
